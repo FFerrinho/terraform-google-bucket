@@ -33,8 +33,8 @@ No modules.
 | <a name="input_lifecycle_rule_action_type"></a> [lifecycle\_rule\_action\_type](#input\_lifecycle\_rule\_action\_type) | The type for the lifecycle rule action. | `string` | `"Delete"` | no |
 | <a name="input_lifecycle_rule_condition_age"></a> [lifecycle\_rule\_condition\_age](#input\_lifecycle\_rule\_condition\_age) | The age for the lifecycle rule condition. | `number` | `30` | no |
 | <a name="input_lifecycle_rule_condition_created_before"></a> [lifecycle\_rule\_condition\_created\_before](#input\_lifecycle\_rule\_condition\_created\_before) | The created before for the lifecycle rule condition. | `string` | `"2019-01-01"` | no |
-| <a name="input_lifecycle_rule_condition_is_live"></a> [lifecycle\_rule\_condition\_is\_live](#input\_lifecycle\_rule\_condition\_is\_live) | The is live for the lifecycle rule condition. | `bool` | `false` | no |
 | <a name="input_lifecycle_rule_condition_num_newer_versions"></a> [lifecycle\_rule\_condition\_num\_newer\_versions](#input\_lifecycle\_rule\_condition\_num\_newer\_versions) | The number of newer versions for the lifecycle rule condition. | `number` | `1` | no |
+| <a name="input_lifecycle_rule_condition_with_state"></a> [lifecycle\_rule\_condition\_with\_state](#input\_lifecycle\_rule\_condition\_with\_state) | Match to live and/or archived objects. Unversioned buckets have only live objects. | `string` | `"ANY"` | no |
 | <a name="input_location"></a> [location](#input\_location) | The location for the bucket. | `string` | n/a | yes |
 | <a name="input_name"></a> [name](#input\_name) | The name for the bucket. | `string` | n/a | yes |
 | <a name="input_project"></a> [project](#input\_project) | The project for the bucket. | `string` | n/a | yes |
