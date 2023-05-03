@@ -27,7 +27,7 @@ resource "google_storage_bucket" "main" {
       condition {
         age                = var.lifecycle_rule_condition_age
         created_before     = var.lifecycle_rule_condition_created_before
-        is_live            = var.lifecycle_rule_condition_is_live
+        with_state         = var.lifecycle_rule_condition_with_state
         num_newer_versions = var.lifecycle_rule_condition_num_newer_versions
       }
     }

@@ -122,10 +122,15 @@ variable "lifecycle_rule_condition_created_before" {
   default     = "2019-01-01"
 }
 
-variable "lifecycle_rule_condition_is_live" {
-  description = "The is live for the lifecycle rule condition."
-  type        = bool
-  default     = false
+variable "lifecycle_rule_condition_with_state" {
+  description = "Match to live and/or archived objects. Unversioned buckets have only live objects."
+  type        = string
+  default     = "ANY"
+
+  validation {
+    condition     = can(regex("^(LIVE|ARCHIVED|ANY)$", var.lifecycle_rule_condition_with_state))
+    error_message = "The lifecycle rule condition with state must be one of LIVE, ARCHIVED, or ANY."
+  }
 }
 
 variable "lifecycle_rule_condition_num_newer_versions" {
