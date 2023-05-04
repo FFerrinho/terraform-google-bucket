@@ -27,6 +27,7 @@ No modules.
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
 | <a name="input_byte_length"></a> [byte\_length](#input\_byte\_length) | The byte length for the random ID. | `number` | `2` | no |
+| <a name="input_enable_lifecycle_rule"></a> [enable\_lifecycle\_rule](#input\_enable\_lifecycle\_rule) | Whether to enable lifecycle rule for the bucket. | `bool` | `false` | no |
 | <a name="input_force_destroy"></a> [force\_destroy](#input\_force\_destroy) | Whether to force destroy the bucket. | `bool` | `false` | no |
 | <a name="input_labels"></a> [labels](#input\_labels) | A map of labels for the bucket. | `map(string)` | <pre>{<br>  "managed": "terraform"<br>}</pre> | no |
 | <a name="input_lifecycle_rule_action_storage_class"></a> [lifecycle\_rule\_action\_storage\_class](#input\_lifecycle\_rule\_action\_storage\_class) | The storage class for the lifecycle rule action. | `string` | `"NEARLINE"` | no |
