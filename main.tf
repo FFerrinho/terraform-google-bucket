@@ -17,7 +17,7 @@ resource "google_storage_bucket" "main" {
   }
 
   dynamic "lifecycle_rule" {
-    for_each = var.lifecycle_rule_action_type == "" ? [] : [1]
+    for_each                   = toset(var.enable_lifecycle_rule ? ["rule"] : [])
     content {
       action {
         type          = var.lifecycle_rule_action_type

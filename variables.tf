@@ -88,6 +88,12 @@ variable "public_access_prevention" {
   }
 }
 
+variable "enable_lifecycle_rule" {
+  description = "Whether to enable lifecycle rule for the bucket."
+  type        = bool
+  default     = false
+}
+
 variable "lifecycle_rule_action_type" {
   description = "The type for the lifecycle rule action."
   type        = string
