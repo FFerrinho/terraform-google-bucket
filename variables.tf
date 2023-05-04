@@ -66,9 +66,7 @@ variable "versioning" {
 variable "labels" {
   description = "A map of labels for the bucket."
   type        = map(string)
-  default = {
-    managed = "terraform"
-  }
+  default = null
 }
 
 variable "uniform_bucket_level_access" {
