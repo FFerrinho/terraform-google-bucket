@@ -11,6 +11,10 @@ resource "google_storage_bucket" "main" {
   uniform_bucket_level_access = var.uniform_bucket_level_access
   public_access_prevention    = var.public_access_prevention
 
+  soft_delete_policy {
+    retention_duration_seconds = var.soft_delete_policy_retention_duration_seconds
+  }
+
   versioning {
     enabled = var.versioning
   }

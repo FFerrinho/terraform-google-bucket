@@ -2,13 +2,13 @@
 
 | Name | Version |
 |------|---------|
-| <a name="requirement_google"></a> [google](#requirement\_google) | 4.61.0 |
+| <a name="requirement_google"></a> [google](#requirement\_google) | >= 4.61.0 |
 
 ## Providers
 
 | Name | Version |
 |------|---------|
-| <a name="provider_google"></a> [google](#provider\_google) | 4.61.0 |
+| <a name="provider_google"></a> [google](#provider\_google) | >= 4.61.0 |
 | <a name="provider_random"></a> [random](#provider\_random) | n/a |
 
 ## Modules
@@ -19,7 +19,7 @@ No modules.
 
 | Name | Type |
 |------|------|
-| [google_storage_bucket.main](https://registry.terraform.io/providers/hashicorp/google/4.61.0/docs/resources/storage_bucket) | resource |
+| [google_storage_bucket.main](https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/storage_bucket) | resource |
 | [random_id.main](https://registry.terraform.io/providers/hashicorp/random/latest/docs/resources/id) | resource |
 
 ## Inputs
@@ -29,7 +29,7 @@ No modules.
 | <a name="input_byte_length"></a> [byte\_length](#input\_byte\_length) | The byte length for the random ID. | `number` | `2` | no |
 | <a name="input_enable_lifecycle_rule"></a> [enable\_lifecycle\_rule](#input\_enable\_lifecycle\_rule) | Whether to enable lifecycle rule for the bucket. | `bool` | `false` | no |
 | <a name="input_force_destroy"></a> [force\_destroy](#input\_force\_destroy) | Whether to force destroy the bucket. | `bool` | `false` | no |
-| <a name="input_labels"></a> [labels](#input\_labels) | A map of labels for the bucket. | `map(string)` | <pre>{<br>  "managed": "terraform"<br>}</pre> | no |
+| <a name="input_labels"></a> [labels](#input\_labels) | A map of labels for the bucket. | `map(string)` | `null` | no |
 | <a name="input_lifecycle_rule_action_storage_class"></a> [lifecycle\_rule\_action\_storage\_class](#input\_lifecycle\_rule\_action\_storage\_class) | The storage class for the lifecycle rule action. | `string` | `"NEARLINE"` | no |
 | <a name="input_lifecycle_rule_action_type"></a> [lifecycle\_rule\_action\_type](#input\_lifecycle\_rule\_action\_type) | The type for the lifecycle rule action. | `string` | `"Delete"` | no |
 | <a name="input_lifecycle_rule_condition_age"></a> [lifecycle\_rule\_condition\_age](#input\_lifecycle\_rule\_condition\_age) | The age for the lifecycle rule condition. | `number` | `30` | no |
@@ -41,6 +41,7 @@ No modules.
 | <a name="input_project"></a> [project](#input\_project) | The project for the bucket. | `string` | n/a | yes |
 | <a name="input_public_access_prevention"></a> [public\_access\_prevention](#input\_public\_access\_prevention) | Whether to enable public access prevention for the bucket. | `string` | `"inherited"` | no |
 | <a name="input_random_id"></a> [random\_id](#input\_random\_id) | If a numeric random ID is to be used as suffix for resources names. | `bool` | `true` | no |
+| <a name="input_soft_delete_policy_retention_duration_seconds"></a> [soft\_delete\_policy\_retention\_duration\_seconds](#input\_soft\_delete\_policy\_retention\_duration\_seconds) | The retention duration in seconds for the bucket. | `number` | `604800` | no |
 | <a name="input_storage_class"></a> [storage\_class](#input\_storage\_class) | The storage class for the bucket. | `string` | `"STANDARD"` | no |
 | <a name="input_uniform_bucket_level_access"></a> [uniform\_bucket\_level\_access](#input\_uniform\_bucket\_level\_access) | Whether to enable uniform bucket-level access for the bucket. | `bool` | `false` | no |
 | <a name="input_versioning"></a> [versioning](#input\_versioning) | Whether to enable versioning for the bucket. | `bool` | `false` | no |

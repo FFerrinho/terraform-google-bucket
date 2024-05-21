@@ -86,6 +86,12 @@ variable "public_access_prevention" {
   }
 }
 
+variable "soft_delete_policy_retention_duration_seconds" {
+  description = "The retention duration in seconds for the bucket."
+  type        = number
+  default     = 604800
+}
+
 variable "enable_lifecycle_rule" {
   description = "Whether to enable lifecycle rule for the bucket."
   type        = bool
