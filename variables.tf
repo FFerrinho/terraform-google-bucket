@@ -72,13 +72,13 @@ variable "labels" {
 variable "uniform_bucket_level_access" {
   description = "Whether to enable uniform bucket-level access for the bucket."
   type        = bool
-  default     = false
+  default     = true
 }
 
 variable "public_access_prevention" {
   description = "Whether to enable public access prevention for the bucket."
   type        = string
-  default     = "inherited"
+  default     = "enforced"
 
   validation {
     condition     = can(regex("^(inherited|enforced)$", var.public_access_prevention))
