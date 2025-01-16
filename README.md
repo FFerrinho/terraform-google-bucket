@@ -2,13 +2,13 @@
 
 | Name | Version |
 |------|---------|
-| <a name="requirement_google"></a> [google](#requirement\_google) | >= 4.61.0 |
+| <a name="requirement_google"></a> [google](#requirement\_google) | ~> 6 |
 
 ## Providers
 
 | Name | Version |
 |------|---------|
-| <a name="provider_google"></a> [google](#provider\_google) | >= 4.61.0 |
+| <a name="provider_google"></a> [google](#provider\_google) | ~> 6 |
 | <a name="provider_random"></a> [random](#provider\_random) | n/a |
 
 ## Modules
@@ -39,11 +39,11 @@ No modules.
 | <a name="input_location"></a> [location](#input\_location) | The location for the bucket. | `string` | n/a | yes |
 | <a name="input_name"></a> [name](#input\_name) | The name for the bucket. | `string` | n/a | yes |
 | <a name="input_project"></a> [project](#input\_project) | The project for the bucket. | `string` | n/a | yes |
-| <a name="input_public_access_prevention"></a> [public\_access\_prevention](#input\_public\_access\_prevention) | Whether to enable public access prevention for the bucket. | `string` | `"inherited"` | no |
+| <a name="input_public_access_prevention"></a> [public\_access\_prevention](#input\_public\_access\_prevention) | Whether to enable public access prevention for the bucket. | `string` | `"enforced"` | no |
 | <a name="input_random_id"></a> [random\_id](#input\_random\_id) | If a numeric random ID is to be used as suffix for resources names. | `bool` | `true` | no |
 | <a name="input_soft_delete_policy_retention_duration_seconds"></a> [soft\_delete\_policy\_retention\_duration\_seconds](#input\_soft\_delete\_policy\_retention\_duration\_seconds) | The retention duration in seconds for the bucket. | `number` | `604800` | no |
 | <a name="input_storage_class"></a> [storage\_class](#input\_storage\_class) | The storage class for the bucket. | `string` | `"STANDARD"` | no |
-| <a name="input_uniform_bucket_level_access"></a> [uniform\_bucket\_level\_access](#input\_uniform\_bucket\_level\_access) | Whether to enable uniform bucket-level access for the bucket. | `bool` | `false` | no |
+| <a name="input_uniform_bucket_level_access"></a> [uniform\_bucket\_level\_access](#input\_uniform\_bucket\_level\_access) | Whether to enable uniform bucket-level access for the bucket. | `bool` | `true` | no |
 | <a name="input_versioning"></a> [versioning](#input\_versioning) | Whether to enable versioning for the bucket. | `bool` | `false` | no |
 
 ## Outputs
