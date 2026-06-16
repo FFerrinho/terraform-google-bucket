@@ -1,0 +1,34 @@
+# Normalize all text files to LF line endings in repo
+* text=auto eol=lf
+
+# Explicitly enforce LF for common text/code files
+*.tf    text eol=lf
+*.yaml  text eol=lf
+*.yml   text eol=lf
+*.sh    text eol=lf
+*.md    text eol=lf
+*.json  text eol=lf
+*.js    text eol=lf
+*.ts    text eol=lf
+*.py    text eol=lf
+*.go    text eol=lf
+*.java  text eol=lf
+*.c     text eol=lf
+*.cpp   text eol=lf
+*.h     text eol=lf
+
+# Keep binary files untouched
+*.png   binary
+*.jpg   binary
+*.jpeg  binary
+*.gif   binary
+*.ico   binary
+*.pdf   binary
+*.zip   binary
+*.tar   binary
+*.gz    binary
+*.exe   binary
+*.dll   binary
+
+# Optional: Treat shell scripts as executable
+*.sh    eol=lf text executable
